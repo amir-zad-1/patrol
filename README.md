@@ -1,1 +1,2 @@
 # patrol
+RESTful Authentication Service 
