@@ -1,0 +1,22 @@
+{
+  "name": "patrol",
+  "version": "1.0.0",
+  "description": "Authentication RESTful Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypBox/patrol.git"
+  },
+  "keywords": [
+    "patrol"
+  ],
+  "author": "hypBox.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hypBox/patrol/issues"
+  },
+  "homepage": "https://github.com/hypBox/patrol#readme"
+}
