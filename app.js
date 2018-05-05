@@ -2,18 +2,22 @@ const express = require('express')
 const logger = require('morgan')
 const path = require('path')
 const http = require('http')
+const bodyParser = require('body-parser')
 const config = require('./config/config')
 const app = express()
 
-const homeRoutes = require('./routes/home')
+const authRoutes = require('./src/routes/auth')
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jade')
 
 app.use(logger('dev'))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.json());
 
-app.use('/', homeRoutes)
+
+app.use('/', authRoutes)
+
 app.set('port', config.httpServer.port)
 
 

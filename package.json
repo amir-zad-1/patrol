@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hypBox/patrol#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
