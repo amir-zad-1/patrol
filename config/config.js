@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-    appName: 'patrol',
+    appName: "patrol",
     httpServer: {
         port: 3001
     }

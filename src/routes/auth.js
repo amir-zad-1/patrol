@@ -1,8 +1,8 @@
 "use strict";
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Authentication = require('../auth');
+const Authentication = require("../auth");
 
 router.get("/auth", (request, response) => {
     return response.json({ok: true});
