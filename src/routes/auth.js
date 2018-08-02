@@ -1,16 +1,20 @@
-const express = require('express')
-const router = express.Router()
-const Authentication = require('../auth')
+"use strict";
 
-router.post('/auth', function (req, res) {
-  const body = req.body
-  if (body && body.email && body.password)
-    Authentication.authenticate(body.email, body.password, function (err, authResult) {
-      if (err) return res.json({ok: false})
-      res.json(authResult)
-    })
-  else
-    res.json({ok: false})
-})
+const express = require('express');
+const router = express.Router();
+const Authentication = require('../auth');
 
-module.exports = router
+router.post('/auth', function (request, response) {
+    const body = request.body;
+    if (body && body.email && body.password) {
+        Authentication.authenticate(body.email, body.password).then(authenticationResponse => {
+            return response.json(authenticationResponse);
+        }).catch(error => {
+            return response.json(error);
+        });
+    } else {
+        return response.send(500);
+    }
+});
+
+module.exports = router;

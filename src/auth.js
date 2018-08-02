@@ -1,6 +1,12 @@
-module.exports.authenticate = function (email, password, callback) {
-  if (email === 'test@domain.com' && password === 'pwd')
-    callback(null, {ok: true})
-  else
-    callback(null, {ok: false})
-}
+"use strict";
+
+module.exports.authenticate = (email, password) => {
+    return new Promise((resolve, reject) => {
+        if (email === "test@domain.com" && password === "pwd") {
+            resolve({ok: true});
+        } else {
+            reject({ok: false});
+        }
+    });
+
+};

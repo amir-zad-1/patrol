@@ -1,1 +1,3 @@
-// mongoose models 
+"use strict";
+
+// mongoose models
