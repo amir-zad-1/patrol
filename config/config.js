@@ -3,6 +3,6 @@
 module.exports = {
     appName: "patrol",
     httpServer: {
-        port: 3001
+        port: 8081
     }
 };

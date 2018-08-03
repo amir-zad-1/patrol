@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const Authentication = require("../auth");
 
-router.get("/auth", (request, response) => {
+router.get("/", (request, response) => {
     return response.json({ok: true});
 });
 
