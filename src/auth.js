@@ -8,5 +8,4 @@ module.exports.authenticate = (email, password) => {
             reject({ok: false});
         }
     });
-
 };
